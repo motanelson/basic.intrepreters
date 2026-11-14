@@ -10,8 +10,8 @@ ask_guess:
   INPUT "Enter guess (1-100): ", guess
   LET tries = tries + 1
 
-  IF guess = target THEN END
-      
+  IF guess = target THEN GOTO PRINT "Congratulations! You found it in " + tries + " tries."
+  IF guess = target THEN END    
   
   IF guess < target THEN PRINT "Higher!"
   IF guess > target THEN PRINT "Lower!"
